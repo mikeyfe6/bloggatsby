@@ -9,7 +9,7 @@ const ServicesPage = () => (
         <SEO title="Onze Diensten" />
         <h1>Services</h1>
         <p>Hier gaan onze diensten komen te staan...</p>
-        <Link to="/">Ga terug naar home vanuit Services</Link>
+        <Link to="/">Ga terug naar Home</Link>
     </Layout>
 )
 
