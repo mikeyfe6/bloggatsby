@@ -18,6 +18,7 @@ const Menu = () => (
             <li><Link to="/about">Over Mij</Link></li>
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
 
         </ul>
     </div>
