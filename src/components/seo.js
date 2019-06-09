@@ -75,7 +75,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
+  description: `Dit is mijn eerste eigen blogsite gemaakt met Gatsby`,
 }
 
 SEO.propTypes = {
