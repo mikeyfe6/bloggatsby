@@ -14,13 +14,12 @@ const ContactPage = () => (
         <div class="container">
             <form
                 name="contact"
-                method="post"
+                method="POST"
                 action="/success"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
+                netlify-honeypot="bot-field"
+                data-netlify-recaptcha="true"
             >
                 <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="contact" />
                 <div className="field half first">
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" id="name" />
@@ -42,9 +41,6 @@ const ContactPage = () => (
                     <option value="canada">Canada</option>
                     <option value="usa">USA</option>
                 </select>
-                <div className="field">
-                    <div data-netlify-recaptcha="true"></div>
-                </div>
                 <ul className="actions">
                     <li>
                         <input type="submit" value="Send Message" className="special" />
