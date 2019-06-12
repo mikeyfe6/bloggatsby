@@ -1,14 +1,16 @@
-const dotenv = require('dotenv')
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config()
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   dotenv.config()
+// }
 
 module.exports = {
   siteMetadata: {
     title: `First Bloggatsby`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@mikeyfe6`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,9 +31,29 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -47,11 +69,11 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `qoa0g45ma6el`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       },
     },
-    '@contentful/gatsby-transformer-contentful-richtext'
+    // '@contentful/gatsby-transformer-contentful-richtext'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

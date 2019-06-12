@@ -10,7 +10,6 @@ const ContactPage = () => (
         <h1>Contact Mij</h1>
         <p>Hier gaat onze contactformulier</p>
 
-
         <div class="container">
             <form
                 name="contact"

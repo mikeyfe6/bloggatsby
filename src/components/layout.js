@@ -37,7 +37,6 @@ const Layout = ({ children }) => (
             <Header siteTitle={data.site.siteMetadata.title} />
             <Menu />
             <main className={layoutStyles.main}>{children}</main>
-            <br />
           </div>
           <Footer />
         </div>

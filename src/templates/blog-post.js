@@ -1,31 +1,40 @@
 import React from 'react'
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import SEO from "../components/seo"
+
 import Layout from '../components/layout';
 
-export default function Template({ data }) {
-    const post = data.markdownRemark
+export const query = graphql`
+    query($slug: String!) {
+        contentfulBlogPost(slug: {eq: $slug}) {
+        title
+        publishedDate(formatString: "MMMM Do, YYYY")
+        body{
+            json
+        }
+        }
+    }`
+
+const BlogPost = (props) => {
+    const options = {
+        renderNode: {
+            "embedded-asset-block": (node) => {
+                const alt = node.data.target.fields.title['en-US']
+                const url = node.data.target.fields.file['en-US'].url
+                return <img alt={alt} src={url} />
+            }
+        }
+    }
 
     return (
         <Layout>
-            <Link to="/blog">Go Back</Link>
-            <hr />
-            <h1>{post.frontmatter.title}</h1>
-            <h4>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h4>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <SEO title={props.data.contentfulBlogPost.title} />
+            <h1> {props.data.contentfulBlogPost.title} </h1>
+            <p> Posted on {props.data.contentfulBlogPost.publishedDate} </p>
+            {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
         </Layout>
     )
 }
 
-export const postQuery = graphql`
-query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }){
-        html
-        frontmatter {
-            path
-            title
-            author
-            date
-        }
-    }
-}`
+export default BlogPost

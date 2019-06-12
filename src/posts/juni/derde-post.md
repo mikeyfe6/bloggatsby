@@ -1,5 +1,4 @@
 ---
-path: "/post-three"
 date: "2019-04-18"
 title: "Mijn derde Gatsby Post"
 author: "Michael Fransman"

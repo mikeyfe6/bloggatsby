@@ -9,12 +9,12 @@ const Menu = () => (
 
         <ul className={menuStyles.navList}>
 
-            <li><Link className={menuStyles.navItem} to="/">Home</Link></li>
-            <li><Link className={menuStyles.navItem} to="/about">Over Mij</Link></li>
-            <li><Link className={menuStyles.navItem} to="/services">Services</Link></li>
-            <li><Link className={menuStyles.navItem} to="/blog">Blog</Link></li>
-            <li><Link className={menuStyles.navItem} to="/contact">Contact</Link></li>
-            <li><Link className={menuStyles.navItem} to="/register">Inschrijven</Link></li>
+            <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} to="/">Home</Link></li>
+            <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} partiallyActive={true} to="/about">Over Mij</Link></li>
+            <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} partiallyActive={true} to="/services">Services</Link></li>
+            <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} partiallyActive={true} to="/blog">Blog</Link></li>
+            <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} partiallyActive={true} to="/contact">Contact</Link></li>
+            <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} partiallyActive={true} to="/register">Inschrijven</Link></li>
 
         </ul>
     </div>

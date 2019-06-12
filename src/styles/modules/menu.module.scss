@@ -8,6 +8,14 @@
     justify-content: space-evenly;
 
     .navItem {
+      &:hover {
+        color: #666;
+      }
     }
   }
+}
+
+.active {
+  color: orange;
+  font-size: 1.5rem;
 }
