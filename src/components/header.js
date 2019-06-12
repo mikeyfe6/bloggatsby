@@ -18,6 +18,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <p>Deze site gaat de wereld veranderen!</p>
     </div>
   </header>
 )

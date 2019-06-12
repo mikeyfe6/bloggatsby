@@ -9,6 +9,8 @@ const AboutPage = () => (
         <SEO title="About Me" />
         <h1>Over mij</h1>
         <p>Een beetje info over ons...</p>
+        <p>Wat we doen</p>
+        <p>Waar we voor staan enzo..</p>
         <Link to="/">Ga terug naar Home</Link>
     </Layout>
 )

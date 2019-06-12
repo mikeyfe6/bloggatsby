@@ -1,21 +1,25 @@
 .navWrapper {
-  background: #f4f4f4;
-  padding-top: 10px;
+  background: #333;
+  padding: 0.7rem;
 
   .navList {
     list-style: none;
+    text-decoration: none;
     display: flex;
     justify-content: space-evenly;
 
     .navItem {
+      color: white;
+      padding: 1rem;
+      font-size: 1.2rem;
+
       &:hover {
-        color: #f7a278;
+        color: #babf95;
+      }
+
+      &.active {
+        color: pink;
       }
     }
   }
-}
-
-.active {
-  color: #351e29;
-  font-size: 1.5rem;
 }

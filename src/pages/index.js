@@ -9,11 +9,15 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Hi mensen</h1>
-    <p>Dit is mijn eerste blog website.</p>
+    <h2>Welkom bij mijn website in development</h2>
+    <p>Deze website gaat zwaar ge-edited worden.</p>
+    <main></main>
+
+
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image /> 
     </div>*/}
-    <Link to="/about/">Over mij</Link>
+    <Link to="/blog/">Ga naar mijn Blogs</Link>
   </Layout>
 )
 
