@@ -6,9 +6,7 @@ import menuStyles from '../styles/modules/menu.module.scss'
 
 const Menu = () => (
     <div className={menuStyles.navWrapper}>
-
         <ul className={menuStyles.navList}>
-
             <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} to="/">Home</Link></li>
 
             <li><Link className={menuStyles.navItem} activeClassName={menuStyles.active} partiallyActive={true} to="/about">Over Mij</Link></li>

@@ -9,7 +9,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `First Bloggatsby`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Dit is mijn eerste eigen website gemaakt met Gatsby.`,
     author: `@mikeyfe6`,
   },
   plugins: [
@@ -70,7 +70,8 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: "cdn.contentful.com"
       },
     },
     // '@contentful/gatsby-transformer-contentful-richtext'

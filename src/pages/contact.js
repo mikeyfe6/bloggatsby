@@ -19,19 +19,19 @@ const ContactPage = () => (
                 data-netlify-recaptcha="true"
             >
                 <input type="hidden" name="bot-field" />
-                <div className="field half first">
+                <div className="">
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" id="name" />
                 </div>
-                <div className="field half">
+                <div className="">
                     <label htmlFor="email">Email</label>
                     <input type="text" name="email" id="email" />
                 </div>
-                <div className="field">
+                <div className="">
                     <label htmlFor="message">Message</label>
                     <textarea name="message" id="message" rows="7" />
                 </div>
-                <div className="field">
+                <div className="">
                     <label htmlFor="file">Upload File</label>
                     <input type="file" name="myfile" id="myfile" rows="7" />
                 </div>
